@@ -3,7 +3,7 @@ import {
     useRecoilValue,
     useRecoilState
 } from 'recoil';
-import countAtom, { withChar } from '../recoil/text';
+import countAtom, { withChar } from 'recoil/text';
 
 function CharacterCounter() {
     return (

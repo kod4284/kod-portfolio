@@ -1,6 +1,4 @@
-import {
-    atom,
-} from 'recoil';
+import { atom } from 'recoil';
 
 const textAtom = atom({
     key: 'textAtom', // unique ID (with respect to other atoms/selectors)
