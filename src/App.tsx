@@ -22,6 +22,9 @@ function App() {
       {<h3>{t('main')}</h3>}
       <button onClick={changeLang}>{langState}</button>
       <CharacterCounter />
+      <text>
+        <b>daewoong ko</b>Daewoong ko
+      </text>
     </RecoilRoot>
   );
 }
