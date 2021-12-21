@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import {
   RecoilRoot
 } from 'recoil';
-
-import logo from 'logo.svg';
 import CharacterCounter from 'components/CharacterCounter';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18n';
+
+import logo from 'logo.svg';
+import Main from 'components/main';
 
 function App() {
   const { t } = useTranslation('common');
@@ -19,12 +20,13 @@ function App() {
 
   return (
     <RecoilRoot>
-      {<h3>{t('main')}</h3>}
+      <Main />
+      {/* {<h3>{t('main')}</h3>}
       <button onClick={changeLang}>{langState}</button>
       <CharacterCounter />
       <text>
         <b>daewoong ko</b>Daewoong ko
-      </text>
+      </text> */}
     </RecoilRoot>
   );
 }

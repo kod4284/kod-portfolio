@@ -38,7 +38,7 @@ html {
 
 @font-face {
   font-family: 'Moon2.0-Light';
-  src: local('Moon2.0'), url(fonts/Moon2.0-Regular.otf) format('opentype');
+  src: local('Moon2.0'), url(fonts/Moon2.0-Light.otf) format('opentype');
 }
 /* body {
   margin: 0;
@@ -49,7 +49,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 } */
 body {
-  font-family: 'Moon2.0-Regular';
+  font-family: 'Moon2.0-Light';
+  background-color: #181418;
+  color: #F5F3F6;
+  letter-spacing: 1px;
 }
 
 code {
