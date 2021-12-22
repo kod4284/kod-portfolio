@@ -53,6 +53,15 @@ export const Text = styled.h2`
   font-weight: 100;
 `;
 
+export const ArrowContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  svg {
+    width: 2rem;
+    fill: #F5F3F6;
+  }
+`;
+
 export const Keyboard = styled.img`
   @media (max-width: 768px) {
     width: calc(100% + 4rem);

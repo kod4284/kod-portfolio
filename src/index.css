@@ -5,6 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
 
 button {
   background: none;
@@ -33,12 +39,12 @@ html {
 
 @font-face {
   font-family: 'Moon2.0-Regular';
-  src: local('Moon2.0'), url(fonts/Moon2.0-Regular.otf) format('opentype');
+  src: local('Moon2.0'), url(assets/fonts/Moon2.0-Regular.otf) format('opentype');
 }
 
 @font-face {
   font-family: 'Moon2.0-Light';
-  src: local('Moon2.0'), url(fonts/Moon2.0-Light.otf) format('opentype');
+  src: local('Moon2.0'), url(assets/fonts/Moon2.0-Light.otf) format('opentype');
 }
 /* body {
   margin: 0;
