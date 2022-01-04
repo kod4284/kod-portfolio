@@ -3,11 +3,12 @@ import gsap from 'gsap';
 import { ReactComponent as Arrow } from 'assets/svgs/arrow-light.svg';
 
 import {
-  Container,
   Text,
   Keyboard,
   MiddleContainer,
   ArrowContainer,
+  IntroContainer,
+  Container,
 } from './Intro.style';
 
 function Intro() {
@@ -30,8 +31,8 @@ function Intro() {
       .to(arrowRef.current, { y: 15, ease: "circ.in", repeat: -1, yoyo: true, duration: 1},"+=0.1");
   }, []);
   return (
-    <div>
-      <Container ref={appRef}>
+    <Container height={window.innerHeight}>
+      <IntroContainer ref={appRef}>
         <Text ref={perseveranceTextRef}>
           Perseverance
         </Text>
@@ -47,11 +48,11 @@ function Intro() {
         <Text ref={inDevTextRef}>
             in DEV
         </Text>
-      </Container>
+      </IntroContainer>
       <ArrowContainer ref={arrowRef}>
         <Arrow />
       </ArrowContainer>
-    </div>
+    </Container>
   );
 }
 

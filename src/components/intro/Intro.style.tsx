@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{height: number}>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: ${(props) => props.height - 30 + "px"};
+`
+
+export const IntroContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     *:first-child {
