@@ -4,6 +4,7 @@ import Header from 'components/header';
 import Intro from 'components/intro';
 
 import { MainContainer, Container } from './Main.style';
+import AboutMe from 'components/about-me';
 
 function Main() {
   return (
@@ -12,6 +13,7 @@ function Main() {
         <Header />
         <Intro />
       </MainContainer>
+      <AboutMe />
     </Container>
   )
 }

@@ -9,7 +9,6 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  height: "1000px";
 `;
 
 export {};
