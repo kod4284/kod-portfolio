@@ -29,23 +29,23 @@ function AboutMe() {
   useEffect(() => {
     gsap.from(firstTextRef.current,
       { 
-        x: isSmallSceen() ? 0 : -100,
-        y: isSmallSceen() ? -80: -100,
+        x: isSmallSceen() ? 10 : -100,
+        y: isSmallSceen() ? -70: -100,
+        scale: 1.2,
         scrollTrigger:
         {
           trigger: firstTextRef.current,
           scrub: 0.1,
           start: "bottom center",
           end: "250px center",
-
         }
         })
         window.innerWidth == 768
     gsap.from(secondTextRef.current,
       { 
-        x: isSmallSceen() ? -110 : 100,
-        y: isSmallSceen() ? -120: -248,
-        ease: "ease.in",
+        x: isSmallSceen() ? -90 : 190,
+        y: isSmallSceen() ? -110: -248,
+        scale: 1.2,
         scrollTrigger:
         {
           trigger: secondTextRef.current,
@@ -58,10 +58,10 @@ function AboutMe() {
   return (
     <Container>
       <IntroContainer>
-        <IntroText ref={firstTextRef}>{t("failureIsNot")}</IntroText>
+        <IntroText ref={firstTextRef}>"Failure Is Not</IntroText>
         <IntroTextContainer>
           <Cup ref={cupRef} src={require("assets/photos/cup.jpeg")} />
-          <IntroText ref={secondTextRef}>{t("anOption")}</IntroText>
+          <IntroText ref={secondTextRef}>an Option"</IntroText>
         </IntroTextContainer>
       </IntroContainer>
       <AboutMeContainer>

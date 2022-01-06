@@ -25,6 +25,7 @@ export const IntroText = styled.h1`
   vertical-align: middle;
   font-size: 8rem;
   font-weight: 600;
+  width: fit-content;
   padding-bottom: 4rem;
   @media(max-width: 768px) {
     font-size: 4.5rem;
