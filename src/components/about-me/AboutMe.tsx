@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation } from 'react-i18next';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollBar from 'smooth-scrollbar';
+
+import { applySmoothScroll } from 'lib/smoothScroll';
 gsap.registerPlugin(ScrollTrigger);
 
 import {
@@ -25,8 +28,9 @@ function AboutMe() {
   const firstTextRef = useRef<HTMLHeadingElement>(null);
   const secondTextRef = useRef<HTMLHeadingElement>(null);
   const cupRef = useRef<HTMLImageElement>(null);
-
+  
   useEffect(() => {
+    applySmoothScroll(ScrollTrigger, ScrollBar);
     gsap.from(firstTextRef.current,
       { 
         x: isSmallSceen() ? 10 : -100,
@@ -48,18 +52,22 @@ function AboutMe() {
         scale: 1.2,
         scrollTrigger:
         {
+
           trigger: secondTextRef.current,
           start: isSmallSceen() ? "top center" :"bottom center",
           end: "250px center",
           scrub: 0.1,
         }
     })
+
   }, []);
+
   return (
-    <Container>
+    <div >
+    <Container className="scroller">
       <IntroContainer>
         <IntroText ref={firstTextRef}>"Failure Is Not</IntroText>
-        <IntroTextContainer>
+        <IntroTextContainer className="k">
           <Cup ref={cupRef} src={require("assets/photos/cup.jpeg")} />
           <IntroText ref={secondTextRef}>an Option"</IntroText>
         </IntroTextContainer>
@@ -79,6 +87,7 @@ function AboutMe() {
         <NameText>— Gene Kranz —</NameText>
       </PhotoContainer>
     </Container>
+    </div>
   )
 }
 

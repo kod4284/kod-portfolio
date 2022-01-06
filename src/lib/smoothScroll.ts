@@ -1,0 +1,22 @@
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Scrollbar from 'smooth-scrollbar';
+
+export function applySmoothScroll(scrollTrigger: typeof ScrollTrigger, scrollBar: typeof Scrollbar) {
+  const scroller = document.querySelector("html") as HTMLElement;
+  const bodyScrollBar = scrollBar.init(scroller, { damping: 0.1, delegateTo: document, alwaysShowTracks: true });
+  
+  scrollTrigger.scrollerProxy(scroller, {
+    scrollTop(value) {
+      if (arguments.length) {
+        bodyScrollBar.scrollTop = value!;
+      }
+      return bodyScrollBar.scrollTop;
+    },
+  });
+  
+  bodyScrollBar.addListener(ScrollTrigger.update);
+  
+  ScrollTrigger.defaults({ scroller: scroller });
+}
+
+export {}
