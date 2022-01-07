@@ -30,6 +30,7 @@ export const InfoSubText = styled.h2`
   font-family: 'NanumSquareOTF-Regular';
   font-weight: 100;
   font-size: 2.5rem;
+  letter-spacing: -0.5px;
   @media(max-width: 768px) {
     font-size: 1.5rem;
     letter-spacing: -0.5px;

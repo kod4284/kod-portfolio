@@ -33,7 +33,7 @@ export const ImgContainer = styled.div`
 export const TextContainer = styled.div`
   margin: 5rem 7% 4rem 7%;
   display: flex;
-  height: 10rem;
+  height: 11rem;
   flex-direction: column;
   justify-content: space-around;
   @media(max-width: 768px) {

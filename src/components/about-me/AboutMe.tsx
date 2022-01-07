@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ScrollBar from 'smooth-scrollbar';
 import { applySmoothScroll } from 'lib/smoothScroll';
+import gsap from 'gsap';
+import ScrollBar from 'smooth-scrollbar';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 import {
@@ -73,12 +73,12 @@ function AboutMe() {
       scrollTrigger:
       {
         trigger: aboutMeTextRef.current,
-        start: "bottom bottom",
+        start: "top center",
       }
     });
     tl.from(aboutMeTextRef.current, {
       ease: "power3.out",
-      yPercent: 100,
+      yPercent: 200,
       duration: 1,
     }).from(contentTextOneRef.current, {
       ease: "power3.out",
@@ -103,8 +103,8 @@ function AboutMe() {
     const tl2 = gsap.timeline({
       scrollTrigger:
       {
-        trigger: quoteRef.current,
-        start: "bottom bottom",
+        trigger: imgRef.current,
+        start: "top center",
       }
     });
     tl2.from(quoteRef.current, {
