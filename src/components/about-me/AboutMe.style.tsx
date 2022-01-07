@@ -38,7 +38,9 @@ export const Cup = styled.img`
   margin-left: 8rem;
   margin-right: 8rem;
   border-radius: 2rem;
-  filter: drop-shadow(5px 5px 5px #222);
+  -webkit-appearance: none;
+  -webkit-box-shadow: 3px 3px 8px 1px #222;
+  box-shadow: 3px 3px 8px 1px #222;
   @media(max-width: 768px) {
     width: 10rem;
     margin-left: 0rem;
@@ -71,10 +73,8 @@ export const ContentText = styled.p`
 `
 
 export const GeneKranz = styled.img`
-  margin-bottom: 1rem;
   width: 53rem;
   border-radius: 2rem;
-  filter: drop-shadow(5px 5px 5px #222);
   @media(max-width: 768px) {
     width: 34rem;
   }
@@ -87,15 +87,28 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
-export const QuoteText = styled.i`
+export const QuoteText = styled.div`
+  font-style: italic;
   margin-top: 0.3rem;
   font-family: "NanumSquareOTF-Light";
   font-size: 2rem;
 `
-export const NameText = styled.text`
+export const NameText = styled.div`
   margin-top: 0.6rem;
   font-family: "NanumSquareOTF-Light";
   font-size: 1.5rem;
+`
+export const TextOverFlowContainer = styled.div`
+  overflow: hidden;
+`
+export const ImgOverFlowContainer = styled.div`
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 3px 3px 8px 1px #222;
+  box-shadow: 3px 3px 8px 1px #222;
+  overflow: hidden;
+  transform: translateZ(0)
 `
 
 export {};

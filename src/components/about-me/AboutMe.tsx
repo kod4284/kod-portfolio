@@ -19,7 +19,9 @@ import {
   GeneKranz,
   PhotoContainer,
   QuoteText,
-  NameText
+  NameText,
+  TextOverFlowContainer,
+  ImgOverFlowContainer
 } from "./AboutMe.style";
 
 function AboutMe() {
@@ -28,6 +30,12 @@ function AboutMe() {
   const firstTextRef = useRef<HTMLHeadingElement>(null);
   const secondTextRef = useRef<HTMLHeadingElement>(null);
   const cupRef = useRef<HTMLImageElement>(null);
+  const aboutMeTextRef = useRef<HTMLHeadingElement>(null);
+  const contentTextOneRef = useRef<HTMLParagraphElement>(null);
+  const contentTextTwoRef = useRef<HTMLParagraphElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const quoteRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     applySmoothScroll(ScrollTrigger, ScrollBar);
@@ -39,9 +47,9 @@ function AboutMe() {
         scrollTrigger:
         {
           trigger: firstTextRef.current,
-          scrub: 0.1,
           start: "bottom center",
           end: "250px center",
+          scrub: true,
         }
         })
         window.innerWidth == 768
@@ -52,14 +60,60 @@ function AboutMe() {
         scale: 1.2,
         scrollTrigger:
         {
-
           trigger: secondTextRef.current,
           start: isSmallSceen() ? "top center" :"bottom center",
           end: "250px center",
-          scrub: 0.1,
+          scrub: true,
         }
     })
 
+    const tl = gsap.timeline({
+      scrollTrigger:
+      {
+        trigger: aboutMeTextRef.current,
+        start: "bottom bottom",
+      }
+    });
+    tl.from(aboutMeTextRef.current, {
+      ease: "power3.out",
+      yPercent: 100,
+      duration: 1,
+    }).from(contentTextOneRef.current, {
+      ease: "power3.out",
+      yPercent: 100,
+      duration: 1
+    }, "<0.2").from(contentTextTwoRef.current, {
+      ease: "power3.out",
+      yPercent: 100,
+      duration: 1
+    }, "<0.2");
+
+    gsap.from(imgRef.current, {
+      scale: 1.2,
+      scrollTrigger:
+      {
+        trigger: imgRef.current,
+        start: "top bottom",
+        scrub: true,
+      }
+    });
+
+    const tl2 = gsap.timeline({
+      scrollTrigger:
+      {
+        trigger: quoteRef.current,
+        start: "bottom bottom",
+      }
+    });
+    tl2.from(quoteRef.current, {
+      ease: "power3.out",
+      yPercent: 100,
+      duration: 1
+    }).from(nameRef.current, {
+      ease: "power3.out",
+      yPercent: 100,
+      duration: 1
+    }, "<0.2");
   }, []);
 
   return (
@@ -73,18 +127,30 @@ function AboutMe() {
         </IntroTextContainer>
       </IntroContainer>
       <AboutMeContainer>
-        <TitleText>About Me</TitleText>
-        <ContentText>
-          {t("pOne")}
-        </ContentText>
-        <ContentText>
-          {t("pTwo")}
-        </ContentText>
+        <TextOverFlowContainer>
+          <TitleText ref={aboutMeTextRef}>About Me</TitleText>
+        </TextOverFlowContainer>
+        <TextOverFlowContainer>
+          <ContentText ref={contentTextOneRef}>
+            {t("pOne")}
+          </ContentText>
+        </TextOverFlowContainer>
+        <TextOverFlowContainer>
+          <ContentText ref={contentTextTwoRef}>
+            {t("pTwo")}
+          </ContentText>
+        </TextOverFlowContainer>
       </AboutMeContainer>
       <PhotoContainer>
-        <GeneKranz src={require("assets/photos/Gene-Kranz-Apollo-11.jpeg")} />
-        <QuoteText>"Failure is not an option"</QuoteText>
-        <NameText>— Gene Kranz —</NameText>
+        <ImgOverFlowContainer>
+          <GeneKranz ref={imgRef} src={require("assets/photos/Gene-Kranz-Apollo-11.jpeg")} />
+        </ImgOverFlowContainer>
+        <TextOverFlowContainer>
+          <QuoteText ref={quoteRef}>"Failure is not an option"</QuoteText>
+        </TextOverFlowContainer>
+        <TextOverFlowContainer>
+          <NameText ref={nameRef}>— Gene Kranz —</NameText>
+        </TextOverFlowContainer>
       </PhotoContainer>
     </Container>
     </div>
