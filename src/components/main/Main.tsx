@@ -3,8 +3,9 @@ import React from 'react';
 import Header from 'components/header';
 import Intro from 'components/intro';
 
-import { MainContainer, Container } from './Main.style';
+import { MainContainer, Container, ContentContainer } from './Main.style';
 import AboutMe from 'components/about-me';
+import Education from 'components/education';
 
 function Main() {
   return (
@@ -13,7 +14,10 @@ function Main() {
         <Header />
         <Intro />
       </MainContainer>
-      <AboutMe />
+      <ContentContainer>
+        <AboutMe />
+        <Education />
+      </ContentContainer>
     </Container>
   )
 }

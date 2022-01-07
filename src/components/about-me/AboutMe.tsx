@@ -3,9 +3,15 @@ import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollBar from 'smooth-scrollbar';
-
 import { applySmoothScroll } from 'lib/smoothScroll';
 gsap.registerPlugin(ScrollTrigger);
+
+import {
+  TitleText,
+  TextOverFlowContainer,
+  ImgOverFlowContainer,
+  TitleImage,
+} from 'components/commons/styles';
 
 import {
   Container,
@@ -14,14 +20,10 @@ import {
   IntroContainer,
   Cup,
   AboutMeContainer,
-  TitleText,
   ContentText,
-  GeneKranz,
   PhotoContainer,
   QuoteText,
   NameText,
-  TextOverFlowContainer,
-  ImgOverFlowContainer
 } from "./AboutMe.style";
 
 function AboutMe() {
@@ -118,7 +120,7 @@ function AboutMe() {
 
   return (
     <div >
-    <Container className="scroller">
+    <Container>
       <IntroContainer>
         <IntroText ref={firstTextRef}>"Failure Is Not</IntroText>
         <IntroTextContainer className="k">
@@ -143,7 +145,7 @@ function AboutMe() {
       </AboutMeContainer>
       <PhotoContainer>
         <ImgOverFlowContainer>
-          <GeneKranz ref={imgRef} src={require("assets/photos/Gene-Kranz-Apollo-11.jpeg")} />
+          <TitleImage ref={imgRef} src={require("assets/photos/Gene-Kranz-Apollo-11.jpeg")} />
         </ImgOverFlowContainer>
         <TextOverFlowContainer>
           <QuoteText ref={quoteRef}>"Failure is not an option"</QuoteText>

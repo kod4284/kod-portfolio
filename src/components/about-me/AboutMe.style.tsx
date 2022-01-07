@@ -1,16 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 13rem;
-  margin: auto;
-  width: 768px;
-  @media(max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 8rem;
-    width: auto;
-  }
 `;
 
 export const IntroContainer = styled.div`
@@ -55,17 +45,6 @@ export const AboutMeContainer = styled.div`
   padding-right: 1rem;
 `
 
-export const TitleText = styled.h1`
-  font-family: 'Moon2.0-Regular';
-  font-weight: 100;
-  font-size: 5rem;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
-  @media(max-width: 768px) {
-    font-size: 3rem;
-  }
-`
-
 export const ContentText = styled.p`
   font-family: "NanumSquareOTF-Light";
   padding: 2rem 1rem 2rem 1rem;
@@ -87,6 +66,7 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
 export const QuoteText = styled.div`
   font-style: italic;
   margin-top: 0.3rem;
@@ -98,17 +78,6 @@ export const NameText = styled.div`
   font-family: "NanumSquareOTF-Light";
   font-size: 1.5rem;
 `
-export const TextOverFlowContainer = styled.div`
-  overflow: hidden;
-`
-export const ImgOverFlowContainer = styled.div`
-  margin-bottom: 1rem;
-  border-radius: 2rem;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 3px 3px 8px 1px #222;
-  box-shadow: 3px 3px 8px 1px #222;
-  overflow: hidden;
-  transform: translateZ(0)
-`
+
 
 export {};

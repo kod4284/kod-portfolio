@@ -17,7 +17,7 @@ function App() {
     setLangState(i18n.language);
     i18n.changeLanguage(toggleLang(i18n.language));
   };
-
+  console.log(i18n.language)
   return (
     <RecoilRoot>
       <Main />
