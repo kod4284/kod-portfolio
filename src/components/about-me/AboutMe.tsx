@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import {
   TitleText,
-  TextOverFlowContainer,
+  OverFlowContainer,
   ImgOverFlowContainer,
   TitleImage,
 } from 'components/commons/styles';
@@ -129,30 +129,30 @@ function AboutMe() {
         </IntroTextContainer>
       </IntroContainer>
       <AboutMeContainer>
-        <TextOverFlowContainer>
+        <OverFlowContainer>
           <TitleText ref={aboutMeTextRef}>About Me</TitleText>
-        </TextOverFlowContainer>
-        <TextOverFlowContainer>
+        </OverFlowContainer>
+        <OverFlowContainer>
           <ContentText ref={contentTextOneRef}>
             {t("pOne")}
           </ContentText>
-        </TextOverFlowContainer>
-        <TextOverFlowContainer>
+        </OverFlowContainer>
+        <OverFlowContainer>
           <ContentText ref={contentTextTwoRef}>
             {t("pTwo")}
           </ContentText>
-        </TextOverFlowContainer>
+        </OverFlowContainer>
       </AboutMeContainer>
       <PhotoContainer>
         <ImgOverFlowContainer>
           <TitleImage ref={imgRef} src={require("assets/photos/Gene-Kranz-Apollo-11.jpeg")} />
         </ImgOverFlowContainer>
-        <TextOverFlowContainer>
+        <OverFlowContainer>
           <QuoteText ref={quoteRef}>"Failure is not an option"</QuoteText>
-        </TextOverFlowContainer>
-        <TextOverFlowContainer>
+        </OverFlowContainer>
+        <OverFlowContainer>
           <NameText ref={nameRef}>— Gene Kranz —</NameText>
-        </TextOverFlowContainer>
+        </OverFlowContainer>
       </PhotoContainer>
     </Container>
     </div>

@@ -19,7 +19,7 @@ export const GatechLogo = styled.img`
   width: 25rem;
   @media(max-width: 768px) {
     width: 13rem;
-    top: 10rem;
+    top: 14rem;
     right: -1rem;
   }
 `;
@@ -29,22 +29,5 @@ export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-export const TextContainer = styled.div`
-  margin: 5rem 7% 4rem 7%;
-  display: flex;
-  height: 11rem;
-  flex-direction: column;
-  justify-content: space-around;
-  @media(max-width: 768px) {
-    margin: 5rem 0 4rem 0;
-    height: 9rem;
-  }
-`
-
-export const DetailTextContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
 
 export {}

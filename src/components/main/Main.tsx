@@ -6,6 +6,7 @@ import Intro from 'components/intro';
 import { MainContainer, Container, ContentContainer } from './Main.style';
 import AboutMe from 'components/about-me';
 import Education from 'components/education';
+import WorkExperience from 'components/work-experience';
 
 function Main() {
   return (
@@ -17,6 +18,7 @@ function Main() {
       <ContentContainer>
         <AboutMe />
         <Education />
+        <WorkExperience />
       </ContentContainer>
     </Container>
   )

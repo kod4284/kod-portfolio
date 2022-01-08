@@ -2,21 +2,18 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useTranslation } from 'react-i18next';
 
+import { InfoText } from 'components/commons/components';
+
 import {
   TitleText,
   ImgOverFlowContainer,
-  TextOverFlowContainer,
-  InfoTitleText,
-  InfoSubText,
-  InfoDetailText,
+  OverFlowContainer,
 } from 'components/commons/styles';
 import {
   Container,
-  DetailTextContainer,
   Gatech,
   GatechLogo,
   ImgContainer,
-  TextContainer
 } from './Education.style';
 
 function Education() {
@@ -29,7 +26,7 @@ function Education() {
   const infoPeriodTextRef = useRef<HTMLHeadingElement>(null);
   const infoRegionTextRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    
+
     gsap.from(titleTextRef.current, {
       ease: "power3.out",
       yPercent: 200,
@@ -92,28 +89,20 @@ function Education() {
   return (
     <Container>
       <GatechLogo ref={gatechLogoRef} src={require("assets/photos/gatech-logo.png")} />
-      <TextOverFlowContainer>
+      <OverFlowContainer>
         <TitleText ref={titleTextRef}>Education</TitleText>
-      </TextOverFlowContainer>
+      </OverFlowContainer>
       <ImgContainer>
         <ImgOverFlowContainer>
           <Gatech ref={gatechRef} src={require("assets/photos/gatech.jpeg")} />
         </ImgOverFlowContainer>
       </ImgContainer>
-      <TextContainer>
-        <TextOverFlowContainer>
-          <InfoTitleText ref={infoTitleTextRef}>{t("school")}</InfoTitleText>
-        </TextOverFlowContainer>
-        <TextOverFlowContainer>
-          <InfoSubText ref={infoSubTextRef}>{t("major")}</InfoSubText>
-        </TextOverFlowContainer>
-        <TextOverFlowContainer>
-          <DetailTextContainer>
-            <InfoDetailText ref={infoPeriodTextRef}>{t("period")}</InfoDetailText>
-            <InfoDetailText ref={infoRegionTextRef}>{t("region")}</InfoDetailText>
-          </DetailTextContainer>
-        </TextOverFlowContainer>
-      </TextContainer>
+      <InfoText
+        title={{ref: infoTitleTextRef, text: t("school")}}
+        sub={{ref: infoSubTextRef, text: t("major")}}
+        period={{ref: infoPeriodTextRef, text: t("period")}}
+        region={{ref: infoRegionTextRef, text: t("region")}}
+      />
   </Container>
   );
 }

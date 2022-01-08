@@ -45,7 +45,7 @@ export const InfoDetailText = styled.h3`
     letter-spacing: -0.5px;
   }
 `
-export const TextOverFlowContainer = styled.div`
+export const OverFlowContainer = styled.div`
   overflow: hidden;
 `
 export const ImgOverFlowContainer = styled.div`
@@ -55,7 +55,23 @@ export const ImgOverFlowContainer = styled.div`
   -webkit-box-shadow: 3px 3px 8px 1px #222;
   box-shadow: 3px 3px 8px 1px #222;
   overflow: hidden;
-  transform: translateZ(0)
+  transform: translateZ(0);
+`
+export const TextContainer = styled.div`
+  margin: 5rem 7% 4rem 7%;
+  display: flex;
+  height: 11rem;
+  flex-direction: column;
+  justify-content: space-around;
+  @media(max-width: 768px) {
+    margin: 5rem 0 4rem 0;
+    height: 9rem;
+  }
+`
+
+export const DetailTextContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
 
 export {}
