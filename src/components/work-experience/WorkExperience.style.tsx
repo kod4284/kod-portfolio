@@ -75,4 +75,9 @@ export const Rokcc = styled.img`
   }
 `;
 
+export const DetailTextContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 export {};

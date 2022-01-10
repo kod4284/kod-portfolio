@@ -1,0 +1,18 @@
+export default {
+  mocTitle: "2020 National Defense Public Data Usage Competition",
+  mocSub: "Minister’s Prize",
+  mocPeriod: "8/2020",
+  mocRegion: "Seoul, Republic of Korea",
+  airforceTitle: "2020 Air Force Start-Up Challenge",
+  airforceSub: "Air Force Chief of Staff’s Prize",
+  airforcePeriod: "8/2020",
+  airforceRegion: "Seoul, Republic of Korea",
+  padongTitle: "2021 Google Solution Challenge",
+  padongSub: "Certificate of Participation",
+  padongPeriod: "6/2021",
+  padongRegion: "Seoul, Republic of Korea",
+  udacityTitle: "Full Stack Web Developer Nanodegree Program",
+  udacitySub: "Udacity | with AT&T, Google and Github",
+  udacityPeriod: "4/2019",
+  udacityRegion: "Atlanta, USA",
+}
