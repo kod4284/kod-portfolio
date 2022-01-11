@@ -9,6 +9,7 @@ import Education from 'components/education';
 import WorkExperience from 'components/work-experience';
 import AwardsAndCerts from 'components/awards-and-certs';
 import MajorSkills from 'components/major-skills';
+import Footer from 'components/footer';
 
 function Main() {
   return (
@@ -23,6 +24,7 @@ function Main() {
         <WorkExperience />
         <AwardsAndCerts />
         <MajorSkills />
+        <Footer />
       </ContentContainer>
     </Container>
   )
