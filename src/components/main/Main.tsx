@@ -8,6 +8,7 @@ import AboutMe from 'components/about-me';
 import Education from 'components/education';
 import WorkExperience from 'components/work-experience';
 import AwardsAndCerts from 'components/awards-and-certs';
+import MajorSkills from 'components/major-skills';
 
 function Main() {
   return (
@@ -21,6 +22,7 @@ function Main() {
         <Education />
         <WorkExperience />
         <AwardsAndCerts />
+        <MajorSkills />
       </ContentContainer>
     </Container>
   )
