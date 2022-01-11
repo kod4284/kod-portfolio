@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, Link } from './Header.style';
+import { Container, Title } from './Header.style';
 
 function Header() {
   return (
@@ -7,9 +7,6 @@ function Header() {
       <Title>
         kod.w
       </Title>
-      <Link href='https://www.github.com/kod4284'>
-        Github
-      </Link>
     </Container>
   );
 }
