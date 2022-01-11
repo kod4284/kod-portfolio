@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div<{height: number}>`
+  height: ${(props) => props.height - 30 + "px"};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: ${(props) => props.height - 30 + "px"};
 `
 
 export const IntroContainer = styled.div`
@@ -52,7 +52,12 @@ export const MiddleContainer = styled.div`
 export const Text = styled.h2`
   width: 35rem;
   @media (max-width: 768px) {
+    font-size: 4.4rem;
     padding: 1rem;
+  }
+  @media(max-height: 550px) {
+    font-size: 3.8rem;
+    padding: 0.2rem;
   }
   display: block;
   padding: 5rem;
@@ -62,6 +67,7 @@ export const Text = styled.h2`
 
 export const ArrowContainer = styled.div`
   display: flex;
+  height: 4rem;
   justify-content: center;
   svg {
     width: 2rem;
