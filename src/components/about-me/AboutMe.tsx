@@ -122,10 +122,11 @@ function AboutMe() {
     <div >
     <Container>
       <IntroContainer>
-        <IntroText ref={firstTextRef}>"Failure Is Not</IntroText>
+        <IntroText>"Failure Is</IntroText>
+        <IntroText id="bold">Not</IntroText>
         <IntroTextContainer className="k">
           <Cup ref={cupRef} src={require("assets/photos/cup.jpeg")} />
-          <IntroText ref={secondTextRef}>an Option"</IntroText>
+          <IntroText>an Option"</IntroText>
         </IntroTextContainer>
       </IntroContainer>
       <AboutMeContainer>

@@ -17,11 +17,11 @@ export const ContentContainer = styled.div`
   margin: auto;
   width: 768px;
   @media(max-width: 768px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 8rem;
-    width: auto;
   }
 `;
 

@@ -1,9 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const IntroContainer = styled.div`
+  display: inline-block;
+  #bold {
+    margin-left: 3.5rem;
+    font-family: "OstrichSans-Bold";
+    font-weight: 100;
+    font-size: 16rem;
+    @media(max-width: 768px) {
+      margin-left: 1.5rem;
+      height: 7rem;
+      font-size: 8rem;
+    }
+  }
 `
 
 export const IntroTextContainer = styled.div`
@@ -12,13 +27,18 @@ export const IntroTextContainer = styled.div`
 `;
 
 export const IntroText = styled.h1`
+  display: inline-block;
+  font-family: "OstrichSans-Black";
   vertical-align: middle;
-  font-size: 8rem;
+  font-size: 11rem;
   font-weight: 600;
+  height: 14rem;
   width: fit-content;
+  letter-spacing: -1px;
   padding-bottom: 4rem;
   @media(max-width: 768px) {
-    font-size: 4.5rem;
+    font-size: 6rem;
+    height: 8rem;
     font-weight: 600;
   }
 `

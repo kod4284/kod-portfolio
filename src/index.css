@@ -5,9 +5,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 body {
+  font-family: 'Moon2.0-Light';
+  background-color: #F5F3F6;
+  color: #181418;
+  letter-spacing: 1px;
+  overflow-x: hidden;
   -ms-overflow-style: none;
 }
+
 ::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
@@ -57,15 +66,17 @@ html {
   src: local('NanumSquareOTF'), url(assets/fonts/NanumSquareOTF-Light.otf) format('opentype');
 }
 
-
-body {
-  font-family: 'Moon2.0-Light';
-  background-color: #F5F3F6;
-  color: #181418;
-  letter-spacing: 1px;
+@font-face {
+  font-family: 'OstrichSans-Black';
+  src: local('OstrichSans'), url(assets/fonts/OstrichSans-Black.otf) format('opentype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'OstrichSans-Bold';
+  src: local('OstrichSans'), url(assets/fonts/OstrichSans-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NanumSquareOTF-Light';
+  src: local('NanumSquareOTF'), url(assets/fonts/NanumSquareOTF-Light.otf) format('opentype');
 }
