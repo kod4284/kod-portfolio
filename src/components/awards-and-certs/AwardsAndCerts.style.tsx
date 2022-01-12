@@ -24,6 +24,7 @@ export const Icon = styled.img`
 
 export const Watermark = styled.img`
   position: absolute;
+  z-index: 0;
   top: 1rem;
   right: 1rem;
   margin-right: 2rem;
@@ -38,6 +39,7 @@ export const Watermark = styled.img`
 export const InfoTextContainer = styled.div`
   display: flex;
   width: 100%;
+  z-index: 1;
   flex-direction: column;
   justify-content: space-around;
 `;
