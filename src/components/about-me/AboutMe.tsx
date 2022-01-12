@@ -31,6 +31,7 @@ function AboutMe() {
 
   const firstTextRef = useRef<HTMLHeadingElement>(null);
   const secondTextRef = useRef<HTMLHeadingElement>(null);
+  const thirdTextRef = useRef<HTMLHeadingElement>(null);
   const cupRef = useRef<HTMLImageElement>(null);
   const aboutMeTextRef = useRef<HTMLHeadingElement>(null);
   const contentTextOneRef = useRef<HTMLParagraphElement>(null);
@@ -41,39 +42,55 @@ function AboutMe() {
   
   useEffect(() => {
     applySmoothScroll(ScrollTrigger, ScrollBar);
-    gsap.from(firstTextRef.current,
-      { 
-        x: isSmallSceen() ? 10 : -100,
-        y: isSmallSceen() ? -70: -100,
-        scale: 1.2,
-        scrollTrigger:
-        {
-          trigger: firstTextRef.current,
-          start: "bottom center",
-          end: "250px center",
-          scrub: true,
-        }
+
+    const introTl = gsap.timeline({
+      scrollTrigger:
+      {
+        trigger: firstTextRef.current,
+        start: "top bottom",
+      }
+    });
+ 
+    introTl.from(firstTextRef.current,
+        { 
+          duration: 1,
+          ease: "power3.out",
+          yPercent: 200,
         })
-        window.innerWidth == 768
-    gsap.from(secondTextRef.current,
-      { 
-        x: isSmallSceen() ? -90 : 190,
-        y: isSmallSceen() ? -110: -248,
-        scale: 1.2,
-        scrollTrigger:
+        .from(secondTextRef.current,
+        { 
+          duration: 1,
+          ease: "power3.out",
+          yPercent: -200,
+        }, "<0.6")
+        .from(thirdTextRef.current,
+        { 
+          duration: 1,
+          ease: "power3.out",
+          yPercent: 200,
+        }, "<0.6")
+        .to(cupRef.current,
         {
-          trigger: secondTextRef.current,
-          start: isSmallSceen() ? "top center" :"bottom center",
-          end: "250px center",
-          scrub: true,
-        }
-    })
+          duration: 0.1,
+          x: "+=10",
+          yoyo: true,
+          repeat: 5
+        })
+        .to(cupRef.current,
+        {
+          duration: 0.1,
+          x: "-=10",
+          yoyo: true,
+          repeat: 5
+        }, "<0");
+
+
 
     const tl = gsap.timeline({
       scrollTrigger:
       {
         trigger: aboutMeTextRef.current,
-        start: "top center",
+        start: "bottom bottom",
       }
     });
     tl.from(aboutMeTextRef.current, {
@@ -122,11 +139,17 @@ function AboutMe() {
     <div >
     <Container>
       <IntroContainer>
-        <IntroText>"Failure Is</IntroText>
-        <IntroText id="bold">Not</IntroText>
+        <OverFlowContainer>
+          <IntroText ref={firstTextRef}>"Failure Is</IntroText>
+        </OverFlowContainer>
+        <OverFlowContainer>
+          <IntroText ref={secondTextRef} id="bold">Not</IntroText>
+        </OverFlowContainer>
         <IntroTextContainer className="k">
           <Cup ref={cupRef} src={require("assets/photos/cup.jpeg")} />
-          <IntroText>an Option"</IntroText>
+          <OverFlowContainer>
+            <IntroText ref={thirdTextRef}>an Option"</IntroText>
+          </OverFlowContainer>
         </IntroTextContainer>
       </IntroContainer>
       <AboutMeContainer>

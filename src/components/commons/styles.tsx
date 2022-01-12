@@ -46,6 +46,7 @@ export const InfoDetailText = styled.h3`
   }
 `
 export const OverFlowContainer = styled.div`
+  display: inline-block;
   overflow: hidden;
 `
 export const ImgOverFlowContainer = styled.div`

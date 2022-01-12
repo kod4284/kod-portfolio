@@ -38,7 +38,7 @@ export const IntroText = styled.h1`
   padding-bottom: 4rem;
   @media(max-width: 768px) {
     font-size: 6rem;
-    height: 8rem;
+    height: 7.5rem;
     font-weight: 600;
   }
 `
