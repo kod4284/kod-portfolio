@@ -11,13 +11,14 @@ export const Icon = styled.img`
   border-radius: 1rem;
   width: 15rem;
   @media(max-width: 768px) {
-    width: 6rem;
+    width: 6.2rem;
     margin-right: 1rem;
   }
 `;
 
 export const IconContainer = styled.div`
   display: flex;
+  width: 100%;
   flex: 1 0 21%;
   padding: 0.5rem;
   justify-content: space-around;
@@ -32,7 +33,7 @@ export const FlexContainer = styled.div`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 2rem 0 2rem;
+  margin: 0 1rem 0 1rem;
   align-items: flex-end;
 `;
 

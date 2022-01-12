@@ -1,5 +1,5 @@
 export default {
-  samsungTitle: "Backend Web Development Engineer Intern",
+  samsungTitle: "Backend Web Development Intern",
   samsungSub: "Mobile Communications Business, Samsung Electronics",
   samsungPeriod: "6/2021 - 8/2021",
   samsungRegion: "Suwon, Republic of Korea",

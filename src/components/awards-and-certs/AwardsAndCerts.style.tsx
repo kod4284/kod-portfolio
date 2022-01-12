@@ -57,6 +57,12 @@ export const InfoContentContainer = styled.div`
   margin: 2rem 1rem 2rem 1rem;
   display: flex;
   position: relative;
+  @media (max-width: 768px) {
+    margin: 0rem 1rem 2rem 1rem;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 `
 
 export const InfoTitleText = styled.h1`

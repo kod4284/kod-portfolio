@@ -10,6 +10,9 @@ export const Container = styled.div`
 export const Divider = styled.div`
   font-size: 8rem;
   letter-spacing: -1rem;
+  @media (max-width: 768px) {
+    font-size: 6rem;
+  }
 `;
 
 export const Icon = styled.img`
@@ -19,7 +22,6 @@ export const Icon = styled.img`
 
 export const IconContainer = styled.div`
   width: 100%;
-  /* height: 100%; */
   display: inline-flex;
   flex-direction: row;
   justify-content: center;

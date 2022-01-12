@@ -18,6 +18,7 @@ export const ContentContainer = styled.div`
   width: 768px;
   @media(max-width: 768px) {
     width: 100%;
+    padding: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;

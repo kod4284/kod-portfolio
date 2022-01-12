@@ -6,6 +6,7 @@ import {
   Container,
   Galaxy,
   GalaxyContainer,
+  GalaxyPositionContainer,
   Ministry,
   MinistryContainer,
   Rokcc,
@@ -144,7 +145,9 @@ function WorkExperience() {
         <ZFlip ref={zFlipRef} src={require('assets/photos/zflip.jpeg')}/>
       </ZFlipContainer>
       <GalaxyContainer>
-        <Galaxy ref={galaxyRef} src={require('assets/photos/galaxy.png')}/>
+        <GalaxyPositionContainer>
+          <Galaxy ref={galaxyRef} src={require('assets/photos/galaxy.png')}/>
+        </GalaxyPositionContainer>
       </GalaxyContainer>
      <InfoText
         title={{ref: samsungInfoTitleRef, text: t("samsungTitle")}}

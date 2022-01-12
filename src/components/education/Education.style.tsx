@@ -25,7 +25,6 @@ export const GatechLogo = styled.img`
 `;
 
 export const ImgContainer = styled.div`
-  padding-top: 3rem;
   display: flex;
   justify-content: center;
 `;

@@ -16,7 +16,7 @@ export const IntroContainer = styled.div`
     @media(max-width: 768px) {
       margin-left: 1.5rem;
       height: 7rem;
-      font-size: 8rem;
+      font-size: 7.5rem;
     }
   }
 `
@@ -37,7 +37,7 @@ export const IntroText = styled.h1`
   letter-spacing: -1px;
   padding-bottom: 4rem;
   @media(max-width: 768px) {
-    font-size: 6rem;
+    font-size: 5.6rem;
     height: 7.5rem;
     font-weight: 600;
   }
@@ -69,6 +69,10 @@ export const ContentText = styled.p`
   font-family: "NanumSquareOTF-Light";
   padding: 2rem 1rem 2rem 1rem;
   font-size: 2.5rem;
+  @media(max-width: 768px) {
+    font-size: 2rem;
+    padding: 0rem 0rem 2rem 0rem;
+  }
 `
 
 export const GeneKranz = styled.img`
@@ -80,8 +84,7 @@ export const GeneKranz = styled.img`
 `
 
 export const PhotoContainer = styled.div`
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

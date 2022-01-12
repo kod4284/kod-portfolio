@@ -10,7 +10,15 @@ export const GalaxyContainer = styled.div`
   justify-content: center;
   overflow: hidden;
   @media(max-width: 768px) {
-    margin: 3rem 0 10rem 0;
+    margin: 0rem 0 9rem 0;
+    width: 32rem;
+  }
+`;
+
+export const GalaxyPositionContainer = styled.div`
+  width: 57rem;
+  @media(max-width: 768px) {
+    width: 31rem;
   }
 `;
 
@@ -34,11 +42,11 @@ export const ZFlipContainer = styled.div`
   overflow: hidden;
   position: absolute;
   top: 21rem;
-  right: 5rem;
+  right: 8rem;
   @media(max-width: 768px) {
     width: 12rem;
-    top: 17.2rem;
-    right: -1rem;
+    top: 15.7rem;
+    right: 0.7rem;
   }
 `;
 
@@ -70,8 +78,8 @@ export const Rokcc = styled.img`
   z-index: 0;
   @media(max-width: 768px) {
     width: 13rem;
-    top: 58rem;
-    right: -1rem;
+    top: 52rem;
+    right: 0rem;
   }
 `;
 

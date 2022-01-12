@@ -24,6 +24,7 @@ export const InfoTitleText = styled.h1`
   font-size: 3rem;
   @media(max-width: 768px) {
     font-size: 2rem;
+    letter-spacing: -0.2px;
   }
 `
 export const InfoSubText = styled.h2`
@@ -38,7 +39,7 @@ export const InfoSubText = styled.h2`
 `
 export const InfoDetailText = styled.h3`
   font-family: 'NanumSquareOTF-light';
-  font-weight: 700;
+  font-weight: 100;
   font-size: 2rem;
   @media(max-width: 768px) {
     font-size: 1.3rem;
@@ -65,8 +66,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   @media(max-width: 768px) {
-    margin: 5rem 0 4rem 0;
-    height: 9rem;
+    margin: 2rem 0 0 0;
+    height: 7rem;
   }
 `
 
