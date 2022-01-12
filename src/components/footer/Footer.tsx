@@ -19,7 +19,9 @@ function Footer() {
           <a href="https://www.instagram.com/__dw.ko__/">
             <Icon src={InstagramIcon}/>
           </a>
-          <Icon src={MailIcon}/>
+          <a href = "mailto: kodw4284@gmail.com">
+            <Icon src={MailIcon}/>
+          </a>
           <a href='https://www.linkedin.com/in/daewoongko/'>
             <Icon src={LinkedinIcon}/>
           </a>
