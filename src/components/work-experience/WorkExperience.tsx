@@ -155,10 +155,12 @@ function WorkExperience() {
         period={{ref: samsungInfoPeriodRef, text: t("samsungPeriod")}}
         region={{ref: samsungInfoRegionRef, text: t("samsungRegion")}}
       />
-        <MinistryContainer>
+      <MinistryContainer>
+        <OverFlowContainer>
           <Ministry ref={ministryRef} src={require('assets/photos/ministry.png')}/>
-        </MinistryContainer>
-      <Rokcc ref={rokccRef} src={require('assets/photos/rokcc.jpeg')}/>
+        </OverFlowContainer>
+      </MinistryContainer>
+    <Rokcc ref={rokccRef} src={require('assets/photos/rokcc.jpeg')}/>
       <InfoText
         title={{ref: rokccInfoTitleRef, text: t("rokccTitle")}}
         sub={{ref: rokccInfoSubRef, text: t("rokccSub")}}

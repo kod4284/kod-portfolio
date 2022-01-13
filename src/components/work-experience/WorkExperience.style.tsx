@@ -52,7 +52,7 @@ export const ZFlipContainer = styled.div`
 
 export const Ministry = styled.img`
   width: 60rem;
-  z-index: 4;
+  z-index: 1;
   @media(max-width: 768px) {
     width: 35rem;
   }

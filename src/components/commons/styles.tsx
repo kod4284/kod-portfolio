@@ -46,9 +46,13 @@ export const InfoDetailText = styled.h3`
     letter-spacing: -0.5px;
   }
 `
-export const OverFlowContainer = styled.div`
+export const OverFlowContainer = styled.div<{ flexShrink?: number }>`
+  z-index: 1;
   display: inline-block;
   overflow: hidden;
+  ${({ flexShrink }) => flexShrink !== undefined && `
+    flex-shrink: ${flexShrink};
+  `}
 `
 export const ImgOverFlowContainer = styled.div`
   margin-bottom: 1rem;
