@@ -11,6 +11,7 @@ export function applySmoothScroll(scrollTrigger: typeof ScrollTrigger, scrollBar
   scrollTrigger.scrollerProxy(scroller, {
     scrollTop(value) {
       if (arguments.length) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         bodyScrollBar.scrollTop = value!;
       }
       return bodyScrollBar.scrollTop;

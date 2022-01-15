@@ -183,8 +183,4 @@ function AboutMe() {
   )
 }
 
-function isSmallSceen() {
-  return window.innerWidth <= 768;
-}
-
 export default AboutMe;
