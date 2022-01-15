@@ -1,6 +1,6 @@
 {
   "name": "kod-portfolio",
-  "homepage": "https://kodw.netlify.app/",
+  "homepage": "https://kodw.netlify.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
