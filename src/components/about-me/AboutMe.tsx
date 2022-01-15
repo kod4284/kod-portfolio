@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { applySmoothScroll } from 'lib/smoothScroll';
 import gsap from 'gsap';
-import ScrollBar from 'smooth-scrollbar';
+// import { applySmoothScroll } from 'lib/smoothScroll';
+// import ScrollBar from 'smooth-scrollbar';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +41,7 @@ function AboutMe() {
   const nameRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    applySmoothScroll(ScrollTrigger, ScrollBar);
+    // applySmoothScroll(ScrollTrigger, ScrollBar);
 
     const introTl = gsap.timeline({
       scrollTrigger:
