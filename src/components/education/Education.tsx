@@ -94,7 +94,7 @@ function Education() {
       </OverFlowContainer>
       <ImgContainer>
         <ImgOverFlowContainer>
-          <Gatech ref={gatechRef} src={require("assets/photos/gatech.jpeg")} />
+          <Gatech ref={gatechRef} src={require("assets/photos/daewoong.jpeg")} />
         </ImgOverFlowContainer>
       </ImgContainer>
       <InfoText

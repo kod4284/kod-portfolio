@@ -5,10 +5,13 @@ export const Container = styled.div`
 `;
 
 export const Gatech = styled.img`
-  width: 53rem;
+  object-fit: cover;
+  width: 45rem;
+  height: 50rem;
   border-radius: 2rem;
   @media(max-width: 768px) {
-    width: 34rem;
+    width: 30rem;
+    height: 40rem;
   }
 `;
 

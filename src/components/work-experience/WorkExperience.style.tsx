@@ -72,13 +72,13 @@ export const Rokcc = styled.img`
   position: absolute;
   border-radius: 100%;
   width: 26rem;
-  top: 82rem;
+  top: 95rem;
   right: 1rem;
   opacity: 35%;
   z-index: 0;
   @media(max-width: 768px) {
     width: 13rem;
-    top: 52rem;
+    top: 63rem;
     right: 0rem;
   }
 `;

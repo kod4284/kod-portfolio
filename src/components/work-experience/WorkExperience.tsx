@@ -26,6 +26,10 @@ function WorkExperience() {
   const samsungInfoSubRef = useRef(null);
   const samsungInfoPeriodRef = useRef(null);
   const samsungInfoRegionRef = useRef(null);
+  const samsungInternInfoTitleRef = useRef(null);
+  const samsungInternInfoSubRef = useRef(null);
+  const samsungInternInfoPeriodRef = useRef(null);
+  const samsungInternInfoRegionRef = useRef(null);
   const ministryRef = useRef(null);
   const rokccRef = useRef(null);
   const rokccInfoTitleRef = useRef(null);
@@ -86,6 +90,31 @@ function WorkExperience() {
       yPercent: 200,
       duration: 2,
     }, "<0");
+    const tl3 = gsap.timeline({
+      scrollTrigger:
+      {
+        trigger: samsungInternInfoTitleRef.current,
+        start: "bottom bottom",
+      }
+    });
+    tl3.from(samsungInternInfoTitleRef.current, {
+      ease: "power3.out",
+      yPercent: 200,
+      duration: 1, 
+    } ).from(samsungInternInfoSubRef.current, {
+      ease: "power3.out",
+      yPercent: 200,
+      duration: 1, 
+    }, "<0.3").from(samsungInternInfoPeriodRef.current, {
+      ease: "power3.out",
+      yPercent: 200,
+      duration: 2,
+    }, "<0.3").from(samsungInternInfoRegionRef.current, {
+      ease: "power3.out",
+      yPercent: 200,
+      duration: 2,
+    }, "<0");
+
 
     gsap.from(ministryRef.current, {
       ease: "power3.out",
@@ -98,14 +127,14 @@ function WorkExperience() {
       }
     });
     
-    const tl3 = gsap.timeline({
+    const tl4 = gsap.timeline({
       scrollTrigger:
       {
         trigger: rokccInfoTitleRef.current,
         start: "bottom bottom",
       }
     });
-    tl3.from(rokccInfoTitleRef.current, {
+    tl4.from(rokccInfoTitleRef.current, {
       ease: "power3.out",
       yPercent: 200,
       duration: 1, 
@@ -154,6 +183,12 @@ function WorkExperience() {
         sub={{ref: samsungInfoSubRef, text: t("samsungSub")}}
         period={{ref: samsungInfoPeriodRef, text: t("samsungPeriod")}}
         region={{ref: samsungInfoRegionRef, text: t("samsungRegion")}}
+      />
+     <InfoText
+        title={{ref: samsungInternInfoTitleRef, text: t("samsungInternTitle")}}
+        sub={{ref: samsungInternInfoSubRef, text: t("samsungInternSub")}}
+        period={{ref: samsungInternInfoPeriodRef, text: t("samsungInternPeriod")}}
+        region={{ref: samsungInternInfoRegionRef, text: t("samsungInternRegion")}}
       />
       <MinistryContainer>
         <OverFlowContainer>
