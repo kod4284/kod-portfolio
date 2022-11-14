@@ -1,7 +1,7 @@
 export default {
-  samsungTitle: "Incoming Software Engineer",
+  samsungTitle: "백엔드 소프트웨어 엔지니어",
   samsungSub: "삼성전자, MX사업부",
-  samsungPeriod: "2022년 7월",
+  samsungPeriod: "2022년 7월 - 현재",
   samsungRegion: "대한민국, 수원",
   samsungInternTitle: "삼성전자 글로벌 인턴십 - 백엔드 웹 개발",
   samsungInternSub: "삼성전자, 무선사업부",

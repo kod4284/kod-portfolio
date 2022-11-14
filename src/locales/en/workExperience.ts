@@ -1,7 +1,7 @@
 export default {
-  samsungTitle: "Incoming Software Engineer",
+  samsungTitle: "Backend Software Engineer",
   samsungSub: "MX (Mobile Experience), Samsung Electronics",
-  samsungPeriod: "7/2022",
+  samsungPeriod: "7/2022 - Present",
   samsungRegion: "Suwon, Republic of Korea",
   samsungInternTitle: "Backend Web Development Intern",
   samsungInternSub: "Mobile Communications Business, Samsung Electronics",
